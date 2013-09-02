@@ -1,0 +1,84 @@
+.wt-itemselector-widget {
+  color: #676767;
+  width: 440px;
+  margin: 0 auto;
+}
+.wt-itemselector-widget .on {
+  background: #EFF6FE;
+}
+.wt-itemselector-widget .panel {
+  width: 176px;
+}
+.wt-itemselector-widget .panel,
+.wt-itemselector-widget .handler {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+}
+.wt-itemselector-widget .src-c,
+.wt-itemselector-widget .target-c {
+  height: 170px;
+  overflow-y: scroll;
+  border: #dcdcdc solid 1px;
+}
+.wt-itemselector-widget .src-c li,
+.wt-itemselector-widget .target-c li {
+  line-height: 24px;
+  height: 24px;
+  border-bottom: #dcdcdc solid 1px;
+}
+.wt-itemselector-widget .src-c {
+  height: 193px;
+}
+.wt-itemselector-widget .src-all,
+.wt-itemselector-widget .target-all {
+  line-height: 26px;
+  height: 26px;
+  border-top: #dcdcdc solid 1px;
+  border-left: #dcdcdc solid 1px;
+  border-right: #dcdcdc solid 1px;
+  margin-top: 5px;
+}
+.wt-itemselector-widget input {
+  margin: 0 5px 0 7px;
+}
+.wt-itemselector-widget .handler {
+  width: 66px;
+  margin: 0 5px;
+  padding-top: 80px;
+}
+.wt-itemselector-widget .target-state {
+  background: #F0F0F0;
+  height: 22px;
+  line-height: 22px;
+  padding-left: 5px;
+  border: 1px solid #DCDCDC;
+  border-top: none;
+}
+.wt-itemselector-widget .target-num {
+  color: #F26422;
+}
+.wt-itemselector-widget .grayBtn {
+  height: 24px;
+  text-align: center;
+  font-size: 12px;
+  border: none;
+  background: url("http://img04.taobaocdn.com/tps/i4/T1KpOGXiBxXXXXXXXX-118-340.png") left -170px no-repeat;
+  width: 66px;
+  margin-top: 10px;
+}
+.wt-itemselector-widget .foot {
+  height: 50px;
+}
+.wt-itemselector-widget .J_Clear {
+  float: right;
+  margin-right: 10px;
+}
+.wt-itemselector-widget .J_confirm {
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+}

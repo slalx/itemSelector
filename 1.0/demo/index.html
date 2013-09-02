@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>itemSelector的demo</title>
+    <script src="http://g.tbcdn.cn/kissy/k/1.3.0/kissy-min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.3.0/css/dpl/base-min.css">
+    <link rel="stylesheet" type="text/css" href="itemSelector.css">
+</head>
+<body>
+    <style type="text/css">
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        ul li{
+            list-style: none;
+        }
+    </style>
+<h2>itemSelector的demo</h2>
+
+    <div class="wt-itemselector-widget" id="J_NumLevelSelector">
+        <div class="panel src">
+            <div>请从以下表格中选择:</div>
+            <div class="src-all">
+                <input type="checkbox" class="" />号码等级:
+            </div>
+            <div class="src-c">
+                <ul class="src-list">
+
+                </ul>
+            </div>
+        </div>
+        <div class="handler">
+            <button type="button" class="grayBtn J_add">增加>></button>
+            <button type="button" class="grayBtn J_del">减少<<</button>
+        </div>
+        <div class="panel target">
+            <div>已选择号码:</div>
+            <div class="target-all">
+                <input type="checkbox" class="" />号码等级:
+            </div>
+            <div class="target-c">
+                <ul class="target-list">
+
+                </ul>
+            </div>  
+            <div class="target-state">已选中<span class="target-num">10</span>种号码<a href="javascript:void(0);" class="J_Clear">清空</a></div>    
+        </div>
+        <div class="foot"><button type="button" class="grayBtn J_confirm">选中条目</button></div>
+    </div>
+
+
+
+<script>
+    var S = KISSY;
+    S.Config.debug = true;
+    if (S.Config.debug) {
+        var srcPath = "../../../";
+        S.config({
+            packages:[
+                {
+                    name:"gallery",
+                    path:srcPath,
+                    charset:"utf-8",
+                    ignorePackageNameInUri:true
+                }
+            ]
+        });
+    }
+
+    S.use('node, gallery/itemSelector/1.0/index', function (S,Node, ItemSelector) {
+        var is = new ItemSelector('#J_NumLevelSelector',{
+            src:[{id:1,name:'第一条'},{id:2,name:'第二条'},{id:3,name:'第三条'},{id:4,name:'第四条'}],
+            target:[{id:1,name:'第一条'},{id:2,name:'第二条'}]
+        });
+
+
+        Node.one('.J_confirm').on('click',function(){
+            alert('选中的id列表'+is.getTargetData());
+        });
+
+    })
+</script>
+</body>
+</html>
